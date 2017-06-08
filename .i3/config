@@ -191,8 +191,8 @@ mode "$mode_stream" {
     bindsym l exec llanfair
     bindsym c exec chromium
     bindsym h exec chatty
-    bindsym s exec firefox -new-window www.speedrunslive.com
-    bindsym n exec firefox -new-window https://streamlabs.com/dashboard/recent-events#/
+    bindsym s exec chromium --new-window www.speedrunslive.com
+    bindsym n exec chromium --new-window https://streamlabs.com/dashboard/recent-events#/
 
     # Return to normal
     bindsym Return mode "default"
