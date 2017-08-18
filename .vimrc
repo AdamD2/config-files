@@ -1,20 +1,6 @@
-" Config Created 2016-04-06
-" Based of config at http://vim.wikia.com/wiki/Example_vimrc
-
-" -----------------------
-
-" Features
-
 " Set 'nocompatible' to ward off unexpected things that your distro might have
 " made, as well as sanely reset options when re-sourcing .vimrc
 set nocompatible
-
-" Attempt to determine file type based of name and possible contents
-" Allows intelligent auto-indenting etc.
-" filetype indent plugin on
-"
-" Changed to off for Vundle
-filetype off
 
 " Enable syntax highlighting
 syntax on
@@ -37,10 +23,6 @@ filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 
-" -----------------------
-
-" Must have options
-
 " Hidden option allows re-use of the same window and switch from an unsaved buffer without saving it first.
 " Also allows you to keep an undo history for multiple files when re-using the same window this way. Note
 " that using persistent undo also lets you undo in multiple files even in the same window, but it is less
@@ -56,8 +38,6 @@ set showcmd
 
 " Highlight searches (use <C-L> to temporarily turn off highlighting)
 set hlsearch
-
-" -----------------------
 
 " Usability options
 
@@ -78,12 +58,9 @@ set ruler
 " Always display the status line even if only one window is displayed
 set laststatus=2
 
-" Instead of failinga command because of unsaved changes, instead raise a
+" Instead of failing a command because of unsaved changes, instead raise a
 " dialogue asking if you wish to save unchaged files.
 set confirm
-
-" Use visual bell instead of beeping when doing something wrong
-set visualbell
 
 " Enable use of the mouse for all modes
 set mouse=a
@@ -98,16 +75,12 @@ set number
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
 
-" -----------------------
-
 " Indentation options
 
 " Indentation for using 4 spaces instead of tabs.
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-
-" -----------------------
 
 " Mappings
 
@@ -123,3 +96,8 @@ color darkblue
 
 "highlight Normal ctermbg=Black ctermfg=Green
 "highlight Comment ctermbg=Black ctermfg=Blue
+
+
+" Highlight after 80 characters
+"hi ColorColumn ctermbg=lightgray guibg=lightgray
+"set colorcolumn=80
