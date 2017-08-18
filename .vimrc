@@ -97,7 +97,10 @@ color darkblue
 "highlight Normal ctermbg=Black ctermfg=Green
 "highlight Comment ctermbg=Black ctermfg=Blue
 
-
 " Highlight after 80 characters
 "hi ColorColumn ctermbg=lightgray guibg=lightgray
 "set colorcolumn=80
+
+"Map backtick to escape
+imap ` <Esc>
+imap <F1> <Esc>
