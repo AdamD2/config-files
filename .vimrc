@@ -103,4 +103,5 @@ color darkblue
 
 "Map backtick to escape
 imap ` <Esc>
+map <F1> <Esc>
 imap <F1> <Esc>
