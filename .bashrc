@@ -13,3 +13,4 @@ set -o vi
 
 alias eclim="/usr/lib/eclipse/eclim"
 alias eclimd="/usr/lib/eclipse/eclimd"
+alias bc="bc -lq"
