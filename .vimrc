@@ -75,6 +75,9 @@ set number
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
 
+" Textwidth (use v and gq to wrap)
+set textwidth=80
+
 " Indentation options
 
 " Indentation for using 4 spaces instead of tabs.
