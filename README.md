@@ -6,6 +6,7 @@
 - Vim 
 - Bash
 - XResources
+- Streamlink
 
 ## Setup
 - Install all relevant programs  
