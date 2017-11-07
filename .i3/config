@@ -205,7 +205,7 @@ bindsym Mod1+n mode "$mode_stream"
 bindsym Mod1+p exec "i3-nagbar -m 'Help: g - Horizontal, v - Vertical, s - Stacking, w - Tabbed, r - Resize, Shift+e - Shutdown, Shift+n - Stream, p - Help, Shift+q - Quit, Shift+c - XKill'"
 
 # Set the desktop background using nitrogen
-exec --no-startup-id nitrogen --restore
+exec --no-startup-id ~/.fehbg 
 
 # Start xscreensaver with i3
 exec_always --no-startup-id xscreensaver
