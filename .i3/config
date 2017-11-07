@@ -219,3 +219,11 @@ bindsym Print exec scrot -e 'mv $f - ~/Pictures/Screenshots'
 
 # Kill programs visually
 #bindsym --release $mod+Shift+c exec --no-startup-id xkill
+
+# Laptop keybindings
+bindcode 121 exec pulseaudio-ctl mute
+bindcode 122 exec pulseaudio-ctl down
+bindcode 123 exec pulseaudio-ctl up
+bindcode 198 exec pulseaudio-ctl mute-input
+bindcode 232 exec light -U 5
+bindcode 233 exec light -A 5
