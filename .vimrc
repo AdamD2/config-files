@@ -12,10 +12,10 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 " Vundle plugins to install
-Plugin 'junegunn/goyo.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+Plugin 'junegunn/goyo.vim'       " Distraction free writing
+Plugin 'tpope/vim-fugitive'      " Git wrapper
+Plugin 'godlygeek/tabular'       " Align text
+Plugin 'vim-airline/vim-airline' " Sleek status bar
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -105,6 +105,5 @@ color darkblue
 "set colorcolumn=80
 
 "Map backtick to escape
-imap ` <Esc>
 map <F1> <Esc>
 imap <F1> <Esc>

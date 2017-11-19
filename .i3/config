@@ -136,6 +136,9 @@ bar {
         tray_output primary
 }
 
+# Toggle bar
+bindsym Mod1+m bar mode toggle
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode

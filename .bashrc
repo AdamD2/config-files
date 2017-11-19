@@ -10,6 +10,7 @@ PS1='[\u@\h \W]\$ '
 
 # Vim mode
 set -o vi 
+
 # Aliases
 
 ## ls related aliases
@@ -31,3 +32,5 @@ function cl()
 {
     if [ $(ls "$1" | wc -w) -le 27 ]; then cd "$1"; ls; else cd "$1"; fi
 }
+
+. .profile

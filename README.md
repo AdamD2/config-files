@@ -3,14 +3,16 @@
 ## Currently Tracking
 - i3 
 - i3 Status Bar
-- Vim 
-- Bash
 - XResources
+- Bash
+- Streamlink
+- Tmux
+- Vim 
 
 ## Setup
 - Install all relevant programs  
 ```
-sudo pacman -S i3-wm i3status i3lock gvim
+sudo pacman -S i3-wm dmenu streamlink tmux gvim
 ```  
 
 - Get Vundle  
@@ -25,3 +27,6 @@ git init
 git remote add origin https://github.com/adamd2/config-files
 git pull origin master
 ```  
+
+- Install plugins in vim
+```:PlugInstall```
