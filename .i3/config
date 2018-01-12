@@ -24,6 +24,9 @@ font pango:monospace 8
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
+# Border mode
+bindsym Mod1+b border toggle
+
 # Vim movement keybindings
 set $up k
 set $down j
@@ -136,9 +139,6 @@ bar {
         tray_output primary
 }
 
-# Toggle bar
-bindsym Mod1+m bar mode toggle
-
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -185,27 +185,8 @@ mode "$mode_system" {
 
 bindsym Mod1+Shift+e mode "$mode_system"
 
-# Stream mode
-set $mode_stream Stream: [o]bs, [d]iscord, [l]lanfair, [c]hromium, c[h]atty, [s]peedrunslive, stream[n]otifications
-
-mode "$mode_stream" {
-    bindsym o exec obs
-    bindsym d exec discord-canary
-    bindsym l exec llanfair
-    bindsym c exec chromium
-    bindsym h exec chatty
-    bindsym s exec chromium --new-window www.speedrunslive.com
-    bindsym n exec chromium --new-window https://streamlabs.com/dashboard/recent-events#/
-
-    # Return to normal
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
-bindsym Mod1+n mode "$mode_stream"
-
 # Help dialog
-bindsym Mod1+p exec "i3-nagbar -m 'Help: g - Horizontal, v - Vertical, s - Stacking, w - Tabbed, r - Resize, Shift+e - Shutdown, Shift+n - Stream, p - Help, Shift+q - Quit, Shift+c - XKill'"
+bindsym Mod1+p exec "i3-nagbar -m 'Help: g - Horizontal, v - Vertical, s - Stacking, w - Tabbed, r - Resize, Shift+e - Shutdown, p - Help, Shift+q - Quit'"
 
 # Set the desktop background using nitrogen
 exec --no-startup-id nitrogen --restore
@@ -213,12 +194,13 @@ exec --no-startup-id nitrogen --restore
 # Start xscreensaver with i3
 exec_always --no-startup-id xscreensaver
 
-# Open pavucontrol on workspace 9
-assign [class="Pavucontrol"] 9
-exec pavucontrol
+# Open kmix on workspace 9
+assign [title="KDE Mixer"] 9
+exec kmix
 
 # Take a screenshot with scrot
 bindsym Print exec scrot -e 'mv $f - ~/Pictures/Screenshots'
 
-# Kill programs visually
-#bindsym --release $mod+Shift+c exec --no-startup-id xkill
+# Open specific windows without a title bar because the UI is instantly
+# recognisable
+new_window pixel 1

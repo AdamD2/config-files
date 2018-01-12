@@ -26,6 +26,9 @@ alias eclimd="/usr/lib/eclipse/eclimd"
 alias grep="grep -E --color=auto"
 alias open="xdg-open"
 alias bc="bc -lq"
+alias mpvv="mpv --script $HOME/.config/mpv/visualizer/visualizer.lua"
+alias mvi="mpv --config-dir=$HOME/.config/mvi"
+alias mps="mpv --script $HOME/.config/mpv/streamcache/streamcache.lua"
 
 # Functions
 function cl()
@@ -33,4 +36,4 @@ function cl()
     if [ $(ls "$1" | wc -w) -le 27 ]; then cd "$1"; ls; else cd "$1"; fi
 }
 
-. .profile
+. ~/.profile
