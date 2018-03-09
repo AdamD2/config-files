@@ -14,7 +14,7 @@
 ## Setup
 - Install all relevant programs  
 ```
-sudo pacman -S i3-wm i3status i3lock gvim tmux w3m streamlink mpv
+sudo pacman -S i3-wm dmenu gvim tmux w3m streamlink mpv
 ```  
 
 - Get Vundle  
