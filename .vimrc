@@ -12,10 +12,13 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 " Vundle plugins to install
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'junegunn/goyo.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'chazy/cscope_maps'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -107,3 +110,6 @@ color darkblue
 "Map backtick to escape
 map <F1> <Esc>
 imap <F1> <Esc>
+
+"Open Goyo with F5
+nmap <F5> :Goyo<cr>

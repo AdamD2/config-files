@@ -10,6 +10,7 @@ PS1='[\u@\h \W]\$ '
 
 # Vim mode
 set -o vi 
+
 # Aliases
 
 ## ls related aliases
@@ -25,6 +26,8 @@ alias eclimd="/usr/lib/eclipse/eclimd"
 alias grep="grep -E --color=auto"
 alias open="xdg-open"
 alias bc="bc -lq"
+alias r="ranger"
+alias w3d="w3m duckduckgo.com"
 
 # Functions
 function cl()

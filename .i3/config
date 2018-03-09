@@ -41,6 +41,8 @@ bindsym Mod1+Shift+q kill
 
 # start dmenu (a program launcher)
 bindsym Mod1+d exec dmenu_run
+# start xfce launcher
+bindsym Mod1+Shift+d exec xfce4-appfinder
 
 # change focus
 bindsym Mod1+$left focus left
@@ -182,43 +184,17 @@ mode "$mode_system" {
 
 bindsym Mod1+Shift+e mode "$mode_system"
 
-# Stream mode
-set $mode_stream Stream: [o]bs, [d]iscord, [l]lanfair, [c]hromium, c[h]atty, [s]peedrunslive, stream[n]otifications
-
-mode "$mode_stream" {
-    bindsym o exec obs
-    bindsym d exec discord-canary
-    bindsym l exec llanfair
-    bindsym c exec chromium
-    bindsym h exec chatty
-    bindsym s exec chromium --new-window www.speedrunslive.com
-    bindsym n exec chromium --new-window https://streamlabs.com/dashboard/recent-events#/
-
-    # Return to normal
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
-bindsym Mod1+n mode "$mode_stream"
-
 # Help dialog
 bindsym Mod1+p exec "i3-nagbar -m 'Help: g - Horizontal, v - Vertical, s - Stacking, w - Tabbed, r - Resize, Shift+e - Shutdown, Shift+n - Stream, p - Help, Shift+q - Quit, Shift+c - XKill'"
 
-# Set the desktop background using nitrogen
+# Set the desktop background using feh
 exec --no-startup-id ~/.fehbg 
 
 # Start xscreensaver with i3
 exec_always --no-startup-id xscreensaver
 
-# Open pavucontrol on workspace 9
-assign [class="Pavucontrol"] 9
-exec pavucontrol
-
 # Take a screenshot with scrot
 bindsym Print exec scrot -e 'mv $f - ~/Pictures/Screenshots'
-
-# Kill programs visually
-#bindsym --release $mod+Shift+c exec --no-startup-id xkill
 
 # Laptop keybindings
 bindcode 121 exec pulseaudio-ctl mute
@@ -227,3 +203,9 @@ bindcode 123 exec pulseaudio-ctl up
 bindcode 198 exec pulseaudio-ctl mute-input
 bindcode 232 exec light -U 5
 bindcode 233 exec light -A 5
+
+# Text to speech shortcut
+bindsym Mod1+t exec "festival --tts /home/adam/tts.txt"
+
+# Remove window titles
+new_window pixel 1
