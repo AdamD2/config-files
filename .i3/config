@@ -196,6 +196,9 @@ bindsym $mod+Shift+e mode "$mode_system"
 # Help dialog
 bindsym $mod+p exec "i3-nagbar -m 'Help: g - Horizontal, v - Vertical, s - Stacking, w - Tabbed, Shift+e - Shutdown, Shift+q - Quit'"
 
+# Panic mode
+bindsym $mod+Shift+Delete	workspace Work ; exec $term -e htop ; exec $term -e ranger
+
 ### Run Programs ###
 
 # Set the desktop background using nitrogen

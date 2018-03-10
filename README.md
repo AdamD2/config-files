@@ -10,9 +10,16 @@
 - Vim 
 
 ## Setup
-- Install all relevant programs  
+- Install all configured programs
 ```
 sudo pacman -S i3-wm dmenu streamlink tmux gvim
+```  
+
+- Optionally install all referenced programs, such as in i3 shortcuts  
+```
+sudo pacman -S thunderbird qutebrowser firefox xfce4-appfinder nitrogen
+xscreensaver kmix htop ranger
+yaourt -S signal-desktop
 ```  
 
 - Get Vundle  
