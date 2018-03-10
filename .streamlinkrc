@@ -1,5 +1,5 @@
 # Player options
-player=mpv
+player=mpv --script /home/adam/.config/mpv/streamcache/streamcache.lua
 player-no-close
 
 # Workaround
