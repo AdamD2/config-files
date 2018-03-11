@@ -3,16 +3,18 @@
 ## Currently Tracking
 - i3 
 - i3 Status Bar
-- XResources
-- Bash
-- Streamlink
-- Tmux
+- i3 Status Bar (Light Config)
 - Vim 
+- Tmux
+- w3m Keybindings
+- Bash
+- XResources
+- Streamlink
 
 ## Setup
 - Install all configured programs
 ```
-sudo pacman -S i3-wm dmenu streamlink tmux gvim
+sudo pacman -S i3-wm dmenu streamlink tmux gvim w3m mpv
 ```  
 
 - Optionally install all referenced programs, such as in i3 shortcuts  

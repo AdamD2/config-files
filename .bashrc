@@ -32,6 +32,7 @@ alias grep="grep -E --color=auto"
 alias open="xdg-open"
 alias bc="bc -lq"
 alias r="ranger"
+alias w3d="w3m duckduckgo.com"
 
 # Functions
 function cl()

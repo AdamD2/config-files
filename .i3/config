@@ -34,8 +34,6 @@ set $pbrowser --no-startup-id firefox --private-window
 set $messaging --no-startup-id signal-desktop
 set $discord --no-startup-id discord
 
-### Window Management ###
-
 # Vim movement key variables
 set $up k
 set $down j
@@ -45,6 +43,8 @@ set $upalt i
 set $downalt u
 set $leftalt y
 set $rightalt o
+
+### Window Management ###
 
 # Change focus
 bindsym $mod+$left focus left
@@ -109,7 +109,7 @@ bindsym $mod+a focus parent
 # Focus the child container
 #bindsym $mod+d focus child
 
-# move the currently focused window to the scratchpad
+# Move the currently focused window to the scratchpad
 bindsym $mod+Shift+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
@@ -161,6 +161,9 @@ bindsym $mod+Shift+p exec $pbrowser
 # Discord (awful proprietary software that I sometimes use)
 bindsym $mod+Shift+m exec $discord
 
+# Text to speech
+bindsym $mod+Shift+t exec "festival --tts /home/adam/tts.txt"
+
 ### i3 Admin ###
 
 # Reload the configuration file
@@ -210,9 +213,3 @@ exec --no-startup-id nitrogen --restore
 
 # Start xscreensaver with i3
 exec_always --no-startup-id xscreensaver
-
-# Open kmix on workspace 9
-assign [title="KDE Mixer"] 9
-exec kmix
-
-
