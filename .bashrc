@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 PS1='[\u@\h \W]\$ '
-[[ -f "/home/adam/.config/autopackage/paths-bash" ]] && . "/home/adam/.config/autopackage/paths-bash"
+[[ -f "$HOME/.config/autopackage/paths-bash" ]] && . "$HOME/.config/autopackage/paths-bash"
 
 # Vim mode
 set -o vi 
@@ -22,6 +22,11 @@ alias ll='ls -l'
 alias eclim="/usr/lib/eclipse/eclim"
 alias eclimd="/usr/lib/eclipse/eclimd"
 
+## mpv aliases
+alias mpvv="mpv --script $HOME/.config/mpv/visualizer/visualizer.lua"
+alias mvi="mpv --config-dir=$HOME/.config/mvi"
+alias mps="mpv --script $HOME/.config/mpv/streamcache/streamcache.lua"
+
 ## Misc
 alias grep="grep -E --color=auto"
 alias open="xdg-open"
@@ -34,3 +39,5 @@ function cl()
 {
     if [ $(ls "$1" | wc -w) -le 27 ]; then cd "$1"; ls; else cd "$1"; fi
 }
+
+. $HOME/.profile

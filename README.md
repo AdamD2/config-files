@@ -12,9 +12,16 @@
 - Streamlink
 
 ## Setup
-- Install all relevant programs  
+- Install all configured programs
 ```
-sudo pacman -S i3-wm dmenu gvim tmux w3m streamlink mpv
+sudo pacman -S i3-wm dmenu streamlink tmux gvim w3m mpv
+```  
+
+- Optionally install all referenced programs, such as in i3 shortcuts  
+```
+sudo pacman -S thunderbird qutebrowser firefox xfce4-appfinder feh
+xscreensaver kmix htop ranger
+yaourt -S signal-desktop
 ```  
 
 - Get Vundle  
@@ -29,3 +36,6 @@ git init
 git remote add origin https://github.com/adamd2/config-files
 git pull origin master
 ```  
+
+- Install plugins in vim
+```:PlugInstall```
