@@ -32,6 +32,7 @@ set $email --no-startup-id thunderbird
 set $browser --no-startup-id qutebrowser
 set $pbrowser --no-startup-id firefox --private-window
 set $messaging --no-startup-id signal-desktop
+set $discord --no-startup-id discord
 
 ### Window Management ###
 
@@ -156,6 +157,9 @@ bindsym $mod+t exec $email
 bindsym $mod+q exec $browser
 bindsym $mod+m exec $messaging
 bindsym $mod+Shift+p exec $pbrowser
+
+# Discord (awful proprietary software that I sometimes use)
+bindsym $mod+Shift+m exec $discord
 
 ### i3 Admin ###
 
