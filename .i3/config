@@ -1,3 +1,4 @@
+#
 # Adam's i3 config file
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -32,6 +33,7 @@ set $email --no-startup-id thunderbird
 set $browser --no-startup-id qutebrowser
 set $pbrowser --no-startup-id firefox --private-window
 set $messaging --no-startup-id signal-desktop
+set $discord --no-startup-id discord
 
 # Vim movement key variables
 set $up k
@@ -88,6 +90,10 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+Shift+q kill
 
 ### Workspace Controls ###
+
+# Move to the next or previous workspace
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
 
 # Change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -155,6 +161,7 @@ bindsym Print exec scrot -e 'mv $f - ~/Pictures/Screenshots'
 bindsym $mod+t exec $email
 bindsym $mod+q exec $browser
 bindsym $mod+m exec $messaging
+bindsym $mod+Shift+m exec $discord
 bindsym $mod+Shift+p exec $pbrowser
 
 # Text to speech
@@ -217,6 +224,6 @@ bindcode 121 exec pulseaudio-ctl mute
 bindcode 122 exec pulseaudio-ctl down
 bindcode 123 exec pulseaudio-ctl up
 bindcode 198 exec pulseaudio-ctl mute-input
-bindcode 232 exec light -U 5
-bindcode 233 exec light -A 5
+bindcode 232 exec light -U 2
+bindcode 233 exec light -A 2
 

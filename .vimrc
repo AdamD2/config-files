@@ -113,3 +113,7 @@ imap <F1> <Esc>
 
 "Open Goyo with F5
 nmap <F5> :Goyo<cr>
+
+" Use better security
+set cm=blowfish2
+set viminfo=
