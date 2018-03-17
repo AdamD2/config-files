@@ -1,5 +1,10 @@
 # Config Files
 
+## About
+This repository is set up to track my config files exactly as I use them on my
+system. There are two main branches, the desktop branch and the laptop branch. I
+may add branches for different laptops in the future to avoid conflicts.
+
 ## Currently Tracking
 - i3 
 - i3 Status Bar
@@ -10,17 +15,18 @@
 - Bash
 - XResources
 - Streamlink
+- mpd/ncmpcpp
 
 ## Setup
-- Install all configured programs
+- Install all configured programs  
 ```
-sudo pacman -S i3-wm dmenu streamlink tmux gvim w3m mpv
+sudo pacman -S i3-wm dmenu gvim tmux w3m streamlink mpd ncmpcpp
 ```  
 
 - Optionally install all referenced programs, such as in i3 shortcuts  
 ```
 sudo pacman -S thunderbird qutebrowser firefox xfce4-appfinder nitrogen
-xscreensaver kmix htop ranger
+xscreensaver kmix htop ranger scrot
 yaourt -S signal-desktop
 ```  
 
