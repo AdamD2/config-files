@@ -164,6 +164,9 @@ bindsym $mod+m exec $messaging
 bindsym $mod+Shift+m exec $discord
 bindsym $mod+Shift+p exec $pbrowser
 
+# Discord (awful proprietary software that I sometimes use)
+bindsym $mod+Shift+m exec $discord
+
 # Text to speech
 bindsym $mod+Shift+t exec "festival --tts /home/adam/tts.txt"
 
@@ -211,8 +214,8 @@ bindsym $mod+Shift+Delete	workspace Work ; exec $term -e htop ; exec $term -e ra
 
 ### Run Programs ###
 
-# Set the desktop background using feh
-exec --no-startup-id ~/.fehbg 
+# Set the desktop background using nitrogen
+exec --no-startup-id nitrogen --restore
 
 # Start xscreensaver with i3
 exec_always --no-startup-id xscreensaver
@@ -226,4 +229,3 @@ bindcode 123 exec pulseaudio-ctl up
 bindcode 198 exec pulseaudio-ctl mute-input
 bindcode 232 exec light -U 2
 bindcode 233 exec light -A 2
-
