@@ -33,6 +33,9 @@ set $browser --no-startup-id qutebrowser
 set $pbrowser --no-startup-id firefox --private-window
 set $messaging --no-startup-id signal-desktop
 set $discord --no-startup-id discord
+set $music --no-startup-id mpd ~/.config/mpd/mpd.conf
+set $wallpaper --no-startup-id nitrogen --restore
+set $screensaver --no-startup-id xscreensaver
 
 # Vim movement key variables
 set $up k
@@ -209,7 +212,23 @@ bindsym $mod+Shift+Delete	workspace Work ; exec $term -e htop ; exec $term -e ra
 ### Run Programs ###
 
 # Set the desktop background using nitrogen
-exec --no-startup-id nitrogen --restore
+exec $wallpaper
 
 # Start xscreensaver with i3
-exec_always --no-startup-id xscreensaver
+exec $screensaver
+
+# Start the mpd daemon 
+exec $music
+
+### Media Keys ###
+
+# Pulse Audio controls
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+
+# Media player controls
+bindsym XF86AudioPlay exec --no-startup-id mpc toggle
+bindsym XF86AudioStop exec --no-startup-id mpc pause
+bindsym XF86AudioNext exec --no-startup-id mpc next
+bindsym XF86AudioPrev exec --no-startup-id mpc prev
