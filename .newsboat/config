@@ -23,12 +23,11 @@ bind-key U show-urls
 bind-key x pb-delete
 
 # Browser Config
-external-url-viewer "urlview"
-browser linkhandler
+external-url-viewer "urlscan"
+browser w3m
 macro , open-in-browser
-macro m set browser "mpv"; open-in-browser ; set browser linkhandler
-macro w set browser "w3m"; open-in-browser ; set browser linkhandler
-macro q set browser "qutebrowser"; open-in-browser ; set browser linkhandler
+macro m set browser "mpv"; open-in-browser ; set browser w3m
+macro q set browser "qutebrowser"; open-in-browser ; set browser w3m
 
 # Colour Config
 color listnormal green default
