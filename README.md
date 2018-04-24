@@ -26,8 +26,8 @@ sudo pacman -S i3-wm dmenu gvim tmux w3m streamlink mpd ncmpcpp
 - Optionally install all referenced programs, such as in i3 shortcuts  
 ```
 sudo pacman -S thunderbird qutebrowser firefox xfce4-appfinder nitrogen
-xscreensaver kmix htop ranger scrot
-yaourt -S signal-desktop
+xscreensaver kmix htop ranger scrot festival
+yaourt -S signal-desktop discord
 ```  
 
 - Get Vundle  

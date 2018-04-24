@@ -1,3 +1,4 @@
+#
 # Adam's i3 config file
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
@@ -93,6 +94,10 @@ bindsym $mod+Shift+q kill
 
 ### Workspace Controls ###
 
+# Move to the next or previous workspace
+bindsym $mod+Tab workspace next
+bindsym $mod+Shift+Tab workspace prev
+
 # Change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
@@ -159,10 +164,8 @@ bindsym Print exec scrot -e 'mv $f - ~/Pictures/Screenshots'
 bindsym $mod+t exec $email
 bindsym $mod+q exec $browser
 bindsym $mod+m exec $messaging
-bindsym $mod+Shift+p exec $pbrowser
-
-# Discord (awful proprietary software that I sometimes use)
 bindsym $mod+Shift+m exec $discord
+bindsym $mod+Shift+p exec $pbrowser
 
 # Text to speech
 bindsym $mod+Shift+t exec "festival --tts /home/adam/tts.txt"
@@ -175,7 +178,7 @@ bindsym $mod+Shift+c reload
 # Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-# Start i3bar to display a workspace bar, see .i3status.conf
+# Start i3status to display a workspace bar, see .i3status.conf
 bar {
         status_command i3status
         tray_output primary
@@ -232,3 +235,10 @@ bindsym XF86AudioPlay exec --no-startup-id mpc toggle
 bindsym XF86AudioStop exec --no-startup-id mpc pause
 bindsym XF86AudioNext exec --no-startup-id mpc next
 bindsym XF86AudioPrev exec --no-startup-id mpc prev
+
+### Laptop Specific Config ###
+
+# Laptop keybindings
+bindcode 198 exec pulseaudio-ctl mute-input
+bindcode 232 exec light -U 2
+bindcode 233 exec light -A 2
