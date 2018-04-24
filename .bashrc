@@ -5,8 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Prompt
 PS1='[\u@\h \W]\$ '
-[[ -f "$HOME/.config/autopackage/paths-bash" ]] && . "$HOME/.config/autopackage/paths-bash"
 
 # Vim mode
 set -o vi 
@@ -18,7 +18,7 @@ alias ls='ls --color=auto'
 alias l.='ls -d .*'
 alias ll='ls -l'
 
-# Eclim aliases
+## Eclim aliases
 alias eclim="/usr/lib/eclipse/eclim"
 alias eclimd="/usr/lib/eclipse/eclimd"
 
@@ -33,11 +33,12 @@ alias open="xdg-open"
 alias bc="bc -lq"
 alias r="ranger"
 alias w3d="w3m duckduckgo.com"
+alias gits="git status -s"
+alias v="vim"
 
-# Functions
-function cl()
-{
-    if [ $(ls "$1" | wc -w) -le 27 ]; then cd "$1"; ls; else cd "$1"; fi
-}
+# Custom Variables
 
-. $HOME/.profile
+## Reddit terminal viewer
+export RTV_EDITOR=vim
+export RTV_BROWSER=w3m
+export RTV_URLVIEWER=urlscan

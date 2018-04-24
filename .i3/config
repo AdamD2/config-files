@@ -164,9 +164,6 @@ bindsym $mod+m exec $messaging
 bindsym $mod+Shift+m exec $discord
 bindsym $mod+Shift+p exec $pbrowser
 
-# Discord (awful proprietary software that I sometimes use)
-bindsym $mod+Shift+m exec $discord
-
 # Text to speech
 bindsym $mod+Shift+t exec "festival --tts /home/adam/tts.txt"
 
@@ -178,7 +175,7 @@ bindsym $mod+Shift+c reload
 # Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-# Start i3bar to display a workspace bar, see .i3status.conf
+# Start i3status to display a workspace bar, see .i3status.conf
 bar {
         status_command i3status
         tray_output primary

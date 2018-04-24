@@ -9,7 +9,7 @@ syntax on
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
+" Let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 " Vundle plugins to install
 Plugin 'vim-airline/vim-airline'
@@ -114,6 +114,11 @@ imap <F1> <Esc>
 "Open Goyo with F5
 nmap <F5> :Goyo<cr>
 
-" Use better security
+"Insert newline below or above with (Shift)Enter
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+
+"Use better security
 set cm=blowfish2
 set viminfo=
+
